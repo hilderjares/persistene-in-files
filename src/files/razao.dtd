@@ -1,8 +1,0 @@
-<!ELEMENT razao_medicos_habitantes (razao)+>
-<!ELEMENT razao (id, grid, uf, nome, censo)>
-<!ATTLIST razao index CDATA #REQUIRED>
-<!ELEMENT id (#PCDATA)>
-<!ELEMENT grid (#PCDATA)>
-<!ELEMENT uf (#PCDATA)>
-<!ELEMENT nome (#PCDATA)>
-<!ELEMENT censo (#PCDATA)>

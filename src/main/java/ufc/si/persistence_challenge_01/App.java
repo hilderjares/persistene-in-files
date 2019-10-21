@@ -1,19 +1,19 @@
 package ufc.si.persistence_challenge_01;
 
+import ufc.si.persistence_challenge_01.csv_to_xml.ConverterCsvToXmlRunner;
+import ufc.si.persistence_challenge_01.xml_to_json.ConverterXmlToJsonRunner;
+
 public class App {
     public static void main(String[] args) {
-        String fileCsvPath = "src/files/vw_razao_medicos_1000_hab.csv";
-        String fileXmlPath = "src/files/output_xml.xml";
-        String fileJsonPath = "src/files/output_json.json";
 
-        FileCsv fileCsv = new FileCsv(fileCsvPath, "", ",");
+        System.err.println("Starting...");
 
-        FileXml fileXml = new FileXml(fileXmlPath);
+        ConverterXmlToJsonRunner converterXmlToJsonRunner = new ConverterXmlToJsonRunner();
+        converterXmlToJsonRunner.runner();
 
-        FileJson fileJson = new FileJson(fileXmlPath, fileJsonPath);
+        ConverterCsvToXmlRunner converterCsvToXmlRunner = new ConverterCsvToXmlRunner();
+        converterCsvToXmlRunner.runner();
 
-        fileXml.saveXml();
-
-        fileJson.createFileJson();
+        System.err.println("Ending...");
     }
 }
