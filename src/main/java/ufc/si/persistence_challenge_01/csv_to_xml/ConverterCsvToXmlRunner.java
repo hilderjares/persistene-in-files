@@ -1,6 +1,8 @@
 package ufc.si.persistence_challenge_01.csv_to_xml;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -8,6 +10,8 @@ import javax.xml.transform.TransformerException;
 import org.w3c.dom.DOMException;
 
 public class ConverterCsvToXmlRunner {
+
+    private static final Logger LOGGER = Logger.getLogger(ConverterCsvToXmlRunner.class.getName());
 
     public void runner() {
 
@@ -23,13 +27,13 @@ public class ConverterCsvToXmlRunner {
             converterCsvToXml.converter();
 
         } catch (DOMException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.INFO, e.getMessage());
         } catch (ParserConfigurationException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.INFO, e.getMessage());
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.INFO, e.getMessage());
         } catch (TransformerException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.INFO, e.getMessage());
         }
     }
 }

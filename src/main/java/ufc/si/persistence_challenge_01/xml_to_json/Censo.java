@@ -15,6 +15,7 @@ public class Censo {
     private String anoCenso;
 
     public Censo() {
+        // Do nothing because JAXB need the default constructor
     }
 
     public String getAnoCenso() {

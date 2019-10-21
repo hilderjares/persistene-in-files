@@ -14,9 +14,8 @@ public class DocumentFile {
 
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-        Document document = documentBuilder.newDocument();
 
-        return document;
+        return documentBuilder.newDocument();
     }
 
     public Element createElementRoot(Document document, String name) {

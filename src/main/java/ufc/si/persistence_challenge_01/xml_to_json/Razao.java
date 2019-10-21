@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlElement;
 public class Razao {
 
     public Razao() {
+        // Do nothing because JAXB need the default constructor
     }
 
     @XmlElement(name = "censo")
